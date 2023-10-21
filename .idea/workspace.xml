@@ -4,17 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="93fa9af4-9e2e-486f-9a5d-89d186d4dbce" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/ntuhpi/task1/BinaryFileHandler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/ntuhpi/task1/FileHandler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/ntuhpi/task1/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/ntuhpi/task1/TextFileHandler.java" afterDir="false" />
+    <list default="true" id="93fa9af4-9e2e-486f-9a5d-89d186d4dbce" name="Changes" comment="add 1 task">
+      <change afterPath="$PROJECT_DIR$/input.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/ntuhpi/task2/DecreasingSumComparator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/ntuhpi/task2/FileSortingApp.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/ntuhpi/task2/IncreasingSumComparator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -56,7 +52,20 @@
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
-  <component name="RunManager" selected="Application.Main">
+  <component name="RunManager" selected="Application.FileSortingApp">
+    <configuration name="FileSortingApp" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="org.ntuhpi.task2.FileSortingApp" />
+      <module name="lab4.2" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.ntuhpi.task2.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="Lab2" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="org.ntuhpi.task1.Lab2" />
       <module name="lab4.2" />
@@ -83,8 +92,8 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="org.ntuhpi.task1.Main" />
+    <configuration name="Lab4" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="org.ntuhpi.task1.Lab4" />
       <module name="lab4.2" />
       <extension name="coverage">
         <pattern>
@@ -109,7 +118,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.Main" />
+        <item itemvalue="Application.FileSortingApp" />
+        <item itemvalue="Application.Lab4" />
         <item itemvalue="Application.Lab3" />
         <item itemvalue="Application.Lab2" />
       </list>
@@ -125,11 +135,34 @@
       <updated>1697890314911</updated>
       <workItem from="1697890315957" duration="5153000" />
       <workItem from="1697895832088" duration="210000" />
-      <workItem from="1697896064311" duration="15673000" />
+      <workItem from="1697896064311" duration="18032000" />
     </task>
+    <task id="LOCAL-00001" summary="add 1 task">
+      <created>1697923138339</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1697923138339</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="add 1 task" />
+    <option name="LAST_COMMIT_MESSAGE" value="add 1 task" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/org/ntuhpi/task2/DecreasingSumComparator.java</url>
+          <line>13</line>
+          <option name="timeStamp" value="4" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
