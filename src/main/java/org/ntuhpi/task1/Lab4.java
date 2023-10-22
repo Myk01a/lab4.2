@@ -27,6 +27,11 @@ public class Lab4 {
             System.out.println("Sorting Lectures from  text file");
             textFileHandler.writeToFile(textFilePath2, textFileHandler.getLectureList());
             System.out.println("Data written to the text file done lecturesSorted.txt.");
+            System.out.println();
+            System.out.println("Reading from  text file...");
+            Lecture[] textLectures2 = textFileHandler.readFromFile(textFilePath2);
+            printLectureArray(textLectures2);
+            System.out.println("Reading from  text file lecturesSorted.txt ... done");
 
         } catch (IOException e) {
             e.printStackTrace();

@@ -4,16 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="93fa9af4-9e2e-486f-9a5d-89d186d4dbce" name="Changes" comment="add  task 2">
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/ntuhpi/task3/fromZIP/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/ntuhpi/task3/toZIP/AcademicGroup.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/ntuhpi/task3/toZIP/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/ntuhpi/task3/toZIP/Student.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/ntuhpi/task1/BinaryFileHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/ntuhpi/task1/BinaryFileHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/ntuhpi/task1/TextFileHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/ntuhpi/task1/TextFileHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/ntuhpi/task2/FileSortingApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/ntuhpi/task2/Main.java" afterDir="false" />
-    </list>
+    <list default="true" id="93fa9af4-9e2e-486f-9a5d-89d186d4dbce" name="Changes" comment="add  task 3" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -151,7 +142,7 @@
       <workItem from="1697890315957" duration="5153000" />
       <workItem from="1697895832088" duration="210000" />
       <workItem from="1697896064311" duration="18807000" />
-      <workItem from="1697955886853" duration="4795000" />
+      <workItem from="1697955886853" duration="5500000" />
     </task>
     <task id="LOCAL-00001" summary="add 1 task">
       <created>1697923138339</created>
@@ -167,7 +158,14 @@
       <option name="project" value="LOCAL" />
       <updated>1697925514313</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="add  task 3">
+      <created>1697961136677</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1697961136677</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -176,6 +174,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="add 1 task" />
     <MESSAGE value="add  task 2" />
-    <option name="LAST_COMMIT_MESSAGE" value="add  task 2" />
+    <MESSAGE value="add  task 3" />
+    <option name="LAST_COMMIT_MESSAGE" value="add  task 3" />
   </component>
 </project>
