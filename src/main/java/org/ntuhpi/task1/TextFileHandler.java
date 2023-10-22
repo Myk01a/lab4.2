@@ -19,8 +19,10 @@ public class TextFileHandler extends FileHandler {
     @Override
     public Lecture[] readFromFile(String filePath) throws IOException {
         ArrayList<Lecture> lectureList = new ArrayList<>();
+        BufferedReader reader = null;
+
         try {
-            BufferedReader reader = new BufferedReader(new FileReader(filePath));
+            reader = new BufferedReader(new FileReader(filePath));
             String line = null;
             while ((line = reader.readLine()) != null) {
                 String[] parts = line.split(",");
@@ -33,12 +35,20 @@ public class TextFileHandler extends FileHandler {
             }
         } catch (IOException e) {
             e.printStackTrace();
+        } finally {
+            if (reader != null) {
+                try {
+                    reader.close();
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+            }
         }
         Lecture[] lectureArray = new Lecture[lectureList.size()];
         lectureArray = lectureList.toArray(lectureArray);
-
         return lectureArray;
     }
+
 
     @Override
     public void writeToFile(String filePath, Lecture[] lectures) throws IOException {

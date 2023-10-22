@@ -6,7 +6,7 @@ import java.util.Collections;
 import java.util.Comparator;
 import java.util.List;
 
-public class FileSortingApp {
+public class Main {
 
     public static void main(String[] args) {
         String inputFilePath = "input.txt";
@@ -25,7 +25,10 @@ public class FileSortingApp {
 
     private static List<Integer> readNumbersFromFile(String filePath) throws IOException {
         List<Integer> numbers = new ArrayList<>();
-        try (BufferedReader reader = new BufferedReader(new FileReader(filePath))) {
+        BufferedReader reader = null;
+
+        try {
+            reader = new BufferedReader(new FileReader(filePath));
             String line;
             while ((line = reader.readLine()) != null) {
                 String[] numberStrings = line.split(" ");
@@ -36,12 +39,24 @@ public class FileSortingApp {
                             numbers.add(number);
                         }
                     } catch (NumberFormatException e) {
+                        e.printStackTrace();
                     }
+                }
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+        } finally {
+            if (reader != null) {
+                try {
+                    reader.close();
+                } catch (IOException e) {
+                    e.printStackTrace();
                 }
             }
         }
         return numbers;
     }
+
 
     private static void sortAndWriteToFile(List<Integer> numbers, String outputPath, Comparator<Integer> comparator)
             throws IOException {

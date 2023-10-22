@@ -49,6 +49,12 @@ public class Lab4 {
             System.out.println("Sorting Lectures from  binary file");
             binaryFileHandler.createBinaryFile(binaryFilePath2);
             System.out.println("Data written to the binary file lecturesSorted.dat");
+            System.out.println();
+            System.out.println("Reading from  binary file...");
+            Lecture[] binaryLectures2 = binaryFileHandler.readFromFile(binaryFilePath2);
+            printLectureArray(binaryLectures2);
+            System.out.println("Reading from  binary file lecturesSorted.dat ... done");
+
 
         } catch (IOException | ClassNotFoundException e) {
             e.printStackTrace();

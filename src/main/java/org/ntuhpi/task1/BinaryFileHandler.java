@@ -14,13 +14,20 @@ public class BinaryFileHandler extends FileHandler {
 
     @Override
     public Lecture[] readFromFile(String filePath) throws IOException, ClassNotFoundException {
-        try  {
-            ObjectInputStream inputStream = new ObjectInputStream(new FileInputStream(filePath));
+        ObjectInputStream inputStream = null;
+        try {
+            inputStream = new ObjectInputStream(new FileInputStream(filePath));
             return (Lecture[]) inputStream.readObject();
-        } catch (IOException e) {
+        } catch (IOException | ClassNotFoundException e) {
             throw new RuntimeException(e);
-        } catch (ClassNotFoundException e) {
-            throw new RuntimeException(e);
+        } finally {
+            if (inputStream != null) {
+                try {
+                    inputStream.close();
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+            }
         }
     }
 
