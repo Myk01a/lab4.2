@@ -39,7 +39,7 @@ public class Main {
                             numbers.add(number);
                         }
                     } catch (NumberFormatException e) {
-                        e.printStackTrace();
+
                     }
                 }
             }

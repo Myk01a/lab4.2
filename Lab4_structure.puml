@@ -1,0 +1,230 @@
+@startuml
+
+/' diagram meta data start
+config=StructureConfiguration;
+{
+  "projectClassification": {
+    "searchMode": "OpenProject", // OpenProject, AllProjects
+    "includedProjects": "",
+    "pathEndKeywords": "*.impl",
+    "isClientPath": "",
+    "isClientName": "",
+    "isTestPath": "",
+    "isTestName": "",
+    "isMappingPath": "",
+    "isMappingName": "",
+    "isDataAccessPath": "",
+    "isDataAccessName": "",
+    "isDataStructurePath": "",
+    "isDataStructureName": "",
+    "isInterfaceStructuresPath": "",
+    "isInterfaceStructuresName": "",
+    "isEntryPointPath": "",
+    "isEntryPointName": "",
+    "treatFinalFieldsAsMandatory": false
+  },
+  "graphRestriction": {
+    "classPackageExcludeFilter": "",
+    "classPackageIncludeFilter": "",
+    "classNameExcludeFilter": "",
+    "classNameIncludeFilter": "",
+    "methodNameExcludeFilter": "",
+    "methodNameIncludeFilter": "",
+    "removeByInheritance": "", // inheritance/annotation based filtering is done in a second step
+    "removeByAnnotation": "",
+    "removeByClassPackage": "", // cleanup the graph after inheritance/annotation based filtering is done
+    "removeByClassName": "",
+    "cutMappings": false,
+    "cutEnum": true,
+    "cutTests": true,
+    "cutClient": true,
+    "cutDataAccess": false,
+    "cutInterfaceStructures": false,
+    "cutDataStructures": false,
+    "cutGetterAndSetter": true,
+    "cutConstructors": true
+  },
+  "graphTraversal": {
+    "forwardDepth": 6,
+    "backwardDepth": 6,
+    "classPackageExcludeFilter": "",
+    "classPackageIncludeFilter": "",
+    "classNameExcludeFilter": "",
+    "classNameIncludeFilter": "",
+    "methodNameExcludeFilter": "",
+    "methodNameIncludeFilter": "",
+    "hideMappings": false,
+    "hideDataStructures": false,
+    "hidePrivateMethods": true,
+    "hideInterfaceCalls": true, // indirection: implementation -> interface (is hidden) -> implementation
+    "onlyShowApplicationEntryPoints": false, // root node is included
+    "useMethodCallsForStructureDiagram": "ForwardOnly" // ForwardOnly, BothDirections, No
+  },
+  "details": {
+    "aggregation": "GroupByClass", // ByClass, GroupByClass, None
+    "showClassGenericTypes": true,
+    "showMethods": true,
+    "showMethodParameterNames": true,
+    "showMethodParameterTypes": true,
+    "showMethodReturnType": true,
+    "showPackageLevels": 2,
+    "showDetailedClassStructure": true
+  },
+  "rootClass": "org.ntuhpi.task1.Lab4",
+  "extensionCallbackMethod": "" // qualified.class.name#methodName - signature: public static String method(String)
+}
+diagram meta data end '/
+
+
+
+digraph g {
+    rankdir="TB"
+    splines=polyline
+    
+
+'nodes 
+subgraph cluster_1035043182 { 
+   	label=ntuhpi
+	labeljust=l
+	fillcolor="#ececec"
+	style=filled
+   
+   subgraph cluster_559231216 { 
+   	label=task1
+	labeljust=l
+	fillcolor="#d8d8d8"
+	style=filled
+   
+   BinaryFileHandler1357840454[
+	label=<<TABLE BORDER="1" CELLBORDER="0" CELLPADDING="4" CELLSPACING="0">
+<TR><TD ALIGN="LEFT" >(C)BinaryFileHandler</TD></TR>
+<HR/>
+<TR><TD ALIGN="LEFT" >+ createBinaryFile(filePath: String)</TD></TR>
+<TR><TD ALIGN="LEFT" >+ readFromFile(filePath: String): Lecture[]</TD></TR>
+<TR><TD ALIGN="LEFT" >+ writeToFile(filePath: String, lectures: Lecture[])</TD></TR>
+</TABLE>>
+	style=filled
+	margin=0
+	shape=plaintext
+	fillcolor="#FFFFFF"
+];
+
+Course1357840454[
+	label=<<TABLE BORDER="1" CELLBORDER="0" CELLPADDING="4" CELLSPACING="0">
+<TR><TD ALIGN="LEFT" >(C)Course</TD></TR>
+<HR/>
+<TR><TD ALIGN="LEFT" >-   name: String [0..1]</TD></TR>
+<TR><TD ALIGN="LEFT" >-   teachersLastName: String [0..1]</TD></TR>
+<HR/>
+<TR><TD ALIGN="LEFT" ># findDateLectureMinNumberStudents(): String</TD></TR>
+<TR><TD ALIGN="LEFT" ># findLastLetterTeacherLastName(): String</TD></TR>
+<TR><TD ALIGN="LEFT" ># findTopicsWithWordInTitle(word: String): String[]</TD></TR>
+</TABLE>>
+	style=filled
+	margin=0
+	shape=plaintext
+	fillcolor="#FFFFFF"
+];
+
+CourseImpl1357840454[
+	label=<<TABLE BORDER="1" CELLBORDER="0" CELLPADDING="4" CELLSPACING="0">
+<TR><TD ALIGN="LEFT" >(C)CourseImpl</TD></TR>
+<HR/>
+<TR><TD ALIGN="LEFT" >-   lectureList: Lecture[] [0..*]</TD></TR>
+<HR/>
+<TR><TD ALIGN="LEFT" >+ compareTo(other: CourseImpl): int</TD></TR>
+<TR><TD ALIGN="LEFT" ># findDateLectureMinNumberStudents(): String</TD></TR>
+<TR><TD ALIGN="LEFT" ># findLastLetterTeacherLastName(): String</TD></TR>
+<TR><TD ALIGN="LEFT" ># findTopicsWithWordInTitle(word: String): String[]</TD></TR>
+<TR><TD ALIGN="LEFT" >+ print()</TD></TR>
+<TR><TD ALIGN="LEFT" ># sortByIncreaseNumberWordsTopic()</TD></TR>
+<TR><TD ALIGN="LEFT" ># sortByTopicAlphabet()</TD></TR>
+</TABLE>>
+	style=filled
+	margin=0
+	shape=plaintext
+	fillcolor="#FFFFFF"
+];
+
+CourseSort1357840454[
+	label=<<TABLE BORDER="1" CELLBORDER="0" CELLPADDING="4" CELLSPACING="0">
+<TR><TD ALIGN="LEFT" >(C)CourseSort</TD></TR>
+<HR/>
+<TR><TD ALIGN="LEFT" ># sortByIncreaseNumberWordsTopic()</TD></TR>
+<TR><TD ALIGN="LEFT" ># sortByTopicAlphabet()</TD></TR>
+</TABLE>>
+	style=filled
+	margin=0
+	shape=plaintext
+	fillcolor="#FFFFFF"
+];
+
+FileHandler1357840454[
+	label=<<TABLE BORDER="1" CELLBORDER="0" CELLPADDING="4" CELLSPACING="0">
+<TR><TD ALIGN="LEFT" >(C)FileHandler</TD></TR>
+<HR/>
+<TR><TD ALIGN="LEFT" >+ readFromFile(filePath: String): Lecture[]</TD></TR>
+<TR><TD ALIGN="LEFT" >+ writeToFile(filePath: String, sortedLectures: Lecture[])</TD></TR>
+</TABLE>>
+	style=filled
+	margin=0
+	shape=plaintext
+	fillcolor="#FFFFFF"
+];
+
+Lab41357840454[
+	label=<<TABLE BORDER="1" CELLBORDER="0" CELLPADDING="4" CELLSPACING="0">
+<TR><TD ALIGN="LEFT" >(C)Lab4</TD></TR>
+<HR/>
+<TR><TD ALIGN="LEFT" >+ main(args: String[])</TD></TR>
+<TR><TD ALIGN="LEFT" >- printLectureArray(textLectures: Lecture[])</TD></TR>
+</TABLE>>
+	style=filled
+	margin=0
+	shape=plaintext
+	fillcolor="#FFFFFF"
+];
+
+Lecture1357840454[
+	label=<<TABLE BORDER="1" CELLBORDER="0" CELLPADDING="4" CELLSPACING="0">
+<TR><TD ALIGN="LEFT" >(C)Lecture</TD></TR>
+<HR/>
+<TR><TD ALIGN="LEFT" >-   data: String [0..1]</TD></TR>
+<TR><TD ALIGN="LEFT" >-   numberStudents: int [1]</TD></TR>
+<TR><TD ALIGN="LEFT" >-   topic: String [0..1]</TD></TR>
+<HR/>
+<TR><TD ALIGN="LEFT" >+ compareTo(other: Lecture): int</TD></TR>
+</TABLE>>
+	style=filled
+	margin=0
+	shape=plaintext
+	fillcolor="#FFFFFF"
+];
+
+TextFileHandler1357840454[
+	label=<<TABLE BORDER="1" CELLBORDER="0" CELLPADDING="4" CELLSPACING="0">
+<TR><TD ALIGN="LEFT" >(C)TextFileHandler</TD></TR>
+<HR/>
+<TR><TD ALIGN="LEFT" >+ createTextFile(filePath: String, lectures: Lecture[])</TD></TR>
+<TR><TD ALIGN="LEFT" >+ readFromFile(filePath: String): Lecture[]</TD></TR>
+<TR><TD ALIGN="LEFT" >+ writeToFile(filePath: String, lectures: Lecture[])</TD></TR>
+</TABLE>>
+	style=filled
+	margin=0
+	shape=plaintext
+	fillcolor="#FFFFFF"
+];
+} 
+} 
+
+'edges    
+Course1357840454 -> CourseImpl1357840454[arrowhead=none, arrowtail=empty, dir=both];
+CourseImpl1357840454 -> CourseSort1357840454[arrowhead=none, arrowtail=empty, dir=both];
+CourseImpl1357840454 -> Lecture1357840454[label="lectureList
+[0..*]"];
+CourseSort1357840454 -> FileHandler1357840454[arrowhead=none, arrowtail=empty, dir=both];
+FileHandler1357840454 -> BinaryFileHandler1357840454[arrowhead=none, arrowtail=empty, dir=both];
+FileHandler1357840454 -> TextFileHandler1357840454[arrowhead=none, arrowtail=empty, dir=both];
+    
+}
+@enduml
